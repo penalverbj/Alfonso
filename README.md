@@ -6,7 +6,21 @@ The initial idea behind Alfonso is to make planning events in between memebrs of
 As more functions are added Alfonso's tasks will become broader to the point where he will make server management easier, not just event planning easier.
 
 ## Commands
-As we create the commands we will update this section
+### Instructions
+$ahelp - pulls up general instructions
+
+$atimers - pulls up timer instructions 
+
+$areminders - pulls up reminder instructions
+
+$apolls - pulls up poll instructions
+
+### Timers
+$ast # - sets a timer in seconds
+
+$amt # - sets a timer in minutes
+
+$aht # - sets a timer in hours
 
 ## Colaborators
 This is a joint effort by nwitherell and penalverbj
