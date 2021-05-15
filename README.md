@@ -16,6 +16,8 @@ $areminders - pulls up reminder instructions
 $apolls - pulls up poll instructions
 
 ### Timers
+For now timers can only be set, in the future they will be able to be deleted.
+
 $ast # - sets a timer in seconds
 
 $amt # - sets a timer in minutes

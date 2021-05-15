@@ -23,13 +23,13 @@ async def on_message(message):
     await channel.send('timer registered for ' + sec)
 
   #instruction commands
-  if msg.startswith('$ahelp'):
+  elif msg.startswith('$ahelp'):
 	  await channel.send(constants.instructions)
-  if msg.startswith('$atimers'):
+  elif msg.startswith('$atimers'):
     await channel.send(constants.timers)
-  if msg.startswith('$areminders'):
+  elif msg.startswith('$areminders'):
     await channel.send(constants.reminders)
-  if msg.startswith('$apolls'):
+  elif msg.startswith('$apolls'):
     await channel.send(constants.polls)
 
 client.run(os.environ['TOKEN'])
