@@ -7,26 +7,26 @@ As more functions are added Alfonso's tasks will become broader to the point whe
 
 ## Commands
 ### Instructions
-$ahelp - pulls up general instructions
+* $ahelp - pulls up general instructions
 
-$atimers - pulls up timer instructions 
+* $atimers - pulls up timer instructions 
 
-$areminders - pulls up reminder instructions
+* $areminders - pulls up reminder instructions
 
-$apolls - pulls up poll instructions
+* $apolls - pulls up poll instructions
 
 ### Timers
 For now timers can only be set, in the future they will be able to be deleted.
 
-$ast name # - sets a timer named "name" for "#" seconds
+* $ast name # - sets a timer named "name" for "#" seconds
 
-$amt name # - sets a timer named "name" in minutes
+* $amt name # - sets a timer named "name" in minutes
 
-$aht name # - sets a timer named "name" in hours
+* $aht name # - sets a timer named "name" in hours
 
-$at [name\] [hh;mm;ss] - sets a timer named "name" for the set time	
+* $at [name\] [hh;mm;ss] - sets a timer named "name" for the set time	
 
-	ex: $at lunch 1;05;00 - set a timer for an hour and 5 minutes from now
+  * ex: $at lunch 1;05;00 - set a timer for an hour and 5 minutes from now
 
 For now formatting is strict for all the timer commands, so for proper results stick to the outlined format. 
 
