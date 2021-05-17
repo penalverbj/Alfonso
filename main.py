@@ -15,20 +15,42 @@ async def on_message(message):
   if message.author == client.user:
     return
 
-	#timer message
-	#command is ast. 
-	#a-Alfonso. s-seconds flag. t-timer. ' ' - to separate it from time constant
-  if msg.startswith('$at '):
-    x = message.split(" ")
+	#TIMERS
+	#command is at. 
+	#a-Alfonso. t-timer. ' ' - to separate it from time constant
+  elif msg.startswith('$at '):
+    x = msg.split(" ")
     name = x[1]
     print(name)
-    time = x[2].split(":")
-    hour = time[0]
-    minute = time[1]
-    second = time[2]
-    print("hour: " +hour + " minute: " + minute + " second: " + second)
-    sec = msg[5:] #gets the number of secs
-    await channel.send('timer registered for ' + sec + "seconds")
+    inTime = x[2].split(":")
+    hour = inTime[0]
+    minute = inTime[1]
+    second = inTime[2]
+    await channel.send("hour: " +hour + " minute: " + minute + " second: " + second)
+    
+	#commad is ast 
+	#s = seconds
+  elif msg.startswith('$ast '):
+	  x = msg.split(" ")
+	  name = x[1]
+	  t = x[2]
+	  await channel.send("timer " + name + " set for " + t + "seconds")
+  
+  #commad is amt 
+	#m = minutes
+  elif msg.startswith('$amt '):
+	  x = msg.split(" ")
+	  name = x[1]
+	  t = x[2]
+	  await channel.send("timer " + name + " set for " + t + "minutes")
+
+  #commad is aht 
+	#h = hours
+  elif msg.startswith('$aht '):
+	  x = msg.split(" ")
+	  name = x[1]
+	  t = x[2]
+	  await channel.send("timer " + name + " set for " + t + "hours")
 
   #instruction commands
   elif msg.startswith('$ahelp'):

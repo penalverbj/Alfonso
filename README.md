@@ -30,5 +30,5 @@ $at [name\] [hh;mm;ss] - sets a timer named "name" for the set time
 
 For now formatting is strict for all the timer commands, so for proper results stick to the outlined format. 
 
-## Colaborators
+## Collaborators
 This is a joint effort by nwitherell and penalverbj
