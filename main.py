@@ -1,6 +1,7 @@
 import discord
 import os
 import constants
+import timer
 
 client = discord.Client()
 
@@ -39,10 +40,14 @@ async def on_message(message):
   #commad is amt 
 	#m = minutes
   elif msg.startswith('$amt '):
-	  x = msg.split(" ")
-	  name = x[1]
-	  t = x[2]
-	  await channel.send("timer " + name + " set for " + t + " minutes")
+    x = msg.split(" ")
+    name = x[1]
+    t = x[2]
+    secs = t * 60
+    timer1 = timer(name, secs)
+    print(timer.timers)
+    print(timer1)
+    await channel.send("timer " + name + " set for " + t + " minutes")
 
   #commad is aht 
 	#h = hours
