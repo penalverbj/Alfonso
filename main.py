@@ -26,15 +26,16 @@ async def on_message(message):
     hour = inTime[0]
     minute = inTime[1]
     second = inTime[2]
-    await channel.send("hour: " +hour + " minute: " + minute + " second: " + second)
-    
+   
+    await channel.send("name: " + name + " hour: " +hour + " minute: " + minute + " second: " + second)
+
 	#commad is ast 
 	#s = seconds
   elif msg.startswith('$ast '):
 	  x = msg.split(" ")
 	  name = x[1]
 	  t = x[2]
-	  await channel.send("timer " + name + " set for " + t + "seconds")
+	  await channel.send("timer " + name + " set for " + t + " seconds")
   
   #commad is amt 
 	#m = minutes
@@ -42,7 +43,7 @@ async def on_message(message):
 	  x = msg.split(" ")
 	  name = x[1]
 	  t = x[2]
-	  await channel.send("timer " + name + " set for " + t + "minutes")
+	  await channel.send("timer " + name + " set for " + t + " minutes")
 
   #commad is aht 
 	#h = hours
@@ -50,7 +51,7 @@ async def on_message(message):
 	  x = msg.split(" ")
 	  name = x[1]
 	  t = x[2]
-	  await channel.send("timer " + name + " set for " + t + "hours")
+	  await channel.send("timer " + name + " set for " + t + " hours")
 
   #instruction commands
   elif msg.startswith('$ahelp'):
