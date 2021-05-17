@@ -26,7 +26,6 @@ async def on_message(message):
     hour = inTime[0]
     minute = inTime[1]
     second = inTime[2]
-   
     await channel.send("name: " + name + " hour: " +hour + " minute: " + minute + " second: " + second)
 
 	#commad is ast 
