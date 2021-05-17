@@ -1,7 +1,7 @@
 import discord
 import os
 import constants
-import timer
+from Timer import Timer
 
 client = discord.Client()
 
@@ -17,7 +17,7 @@ async def on_message(message):
     return
 
 	#TIMERS
-	#command is at. 
+	#command is $at. 
 	#a-Alfonso. t-timer. ' ' - to separate it from time constant
   elif msg.startswith('$at '):
     x = msg.split(" ")
@@ -27,35 +27,46 @@ async def on_message(message):
     hour = inTime[0]
     minute = inTime[1]
     second = inTime[2]
+    secs = (hour * 60 * 60) + (minute * 60) + second
+    timer1 = Timer(name, secs)
+    print(Timer.timers)
+    print(timer1)
     await channel.send("name: " + name + " hour: " +hour + " minute: " + minute + " second: " + second)
 
-	#commad is ast 
+	#commad is $ast 
 	#s = seconds
   elif msg.startswith('$ast '):
-	  x = msg.split(" ")
-	  name = x[1]
-	  t = x[2]
-	  await channel.send("timer " + name + " set for " + t + " seconds")
+    x = msg.split(" ")
+    name = x[1]
+    t = x[2]
+    timer1 = Timer(name, t)
+    print(Timer.timers)
+    print(timer1)
+    await channel.send("timer " + name + " set for " + t + " seconds")
   
-  #commad is amt 
+  #commad is $amt 
 	#m = minutes
   elif msg.startswith('$amt '):
     x = msg.split(" ")
     name = x[1]
     t = x[2]
     secs = t * 60
-    timer1 = timer(name, secs)
-    print(timer.timers)
+    timer1 = Timer(name, secs)
+    print(Timer.timers)
     print(timer1)
     await channel.send("timer " + name + " set for " + t + " minutes")
 
-  #commad is aht 
+  #commad is $aht 
 	#h = hours
   elif msg.startswith('$aht '):
-	  x = msg.split(" ")
-	  name = x[1]
-	  t = x[2]
-	  await channel.send("timer " + name + " set for " + t + " hours")
+    x = msg.split(" ")
+    name = x[1]
+    t = x[2]
+    secs = t * 60 * 60
+    timer1 = Timer(name, secs)
+    print(Timer.timers)
+    print(timer1)
+    await channel.send("timer " + name + " set for " + t + " hours")
 
   #instruction commands
   elif msg.startswith('$ahelp'):
