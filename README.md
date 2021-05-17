@@ -18,11 +18,17 @@ $apolls - pulls up poll instructions
 ### Timers
 For now timers can only be set, in the future they will be able to be deleted.
 
-$ast # - sets a timer in seconds
+$ast name # - sets a timer named "name" for "#" seconds
 
-$amt # - sets a timer in minutes
+$amt name # - sets a timer named "name" in minutes
 
-$aht # - sets a timer in hours
+$aht name # - sets a timer named "name" in hours
+
+$at [name\] [hh;mm;ss] - sets a timer named "name" for the set time	
+
+	ex: $at lunch 1;05;00 - set a timer for an hour and 5 minutes from now
+
+For now formatting is strict for all the timer commands, so for proper results stick to the outlined format. 
 
 ## Colaborators
 This is a joint effort by nwitherell and penalverbj
