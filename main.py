@@ -22,15 +22,19 @@ async def on_message(message):
     elif msg.startswith('$at '):
         x = msg.split(" ")
         name = x[1]
-        print(name)
+        #print(name)
         inTime = x[2].split(":")
         hour = inTime[0]
         minute = inTime[1]
         second = inTime[2]
-        secs = (hour * 60 * 60) + (minute * 60) + second
+        secs = (int(hour) * 60 * 60) + (int(minute) * 60) + int(second)
         timer1 = Timer(name, secs)
-        print(Timer.timers)
-        print(timer1)
+        
+        print(timer1.t)
+        
+        #timer1.timeRun()
+        Timer.start(timer1.t)
+        Timer.stop(timer1.t)
         await channel.send("name: " + name + " hour: " + hour + " minute: " +
                            minute + " second: " + second)
 

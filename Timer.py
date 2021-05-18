@@ -13,3 +13,15 @@ class Timer:
         self.name = name
         self.t = t
         Timer.timers.update({name: t})
+        Timer.start(self.t)
+
+    def start(t):
+      while t:
+        time.sleep(1)
+        t-=1
+      print("done")
+        
+
+
+    def stop(obj):
+      Timer.timers.remove(obj)
