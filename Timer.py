@@ -13,12 +13,12 @@ class Timer:
         self.name = name
         self.t = t
         Timer.timers.update({name: t})
-        Timer.start(self.t)
+        
 
-    def start(t):
-      while t:
-        time.sleep(1)
-        t-=1
+    async def start(self):
+      time_end = time.time()+self.t
+      while time.time() < time_end:
+        pass
       print("done")
         
 

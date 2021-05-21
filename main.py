@@ -33,8 +33,8 @@ async def on_message(message):
         print(timer1.t)
         
         #timer1.timeRun()
-        Timer.start(timer1.t)
-        Timer.stop(timer1.t)
+        await timer1.start()
+        
         await channel.send("name: " + name + " hour: " + hour + " minute: " +
                            minute + " second: " + second)
 
